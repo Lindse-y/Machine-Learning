@@ -13,13 +13,7 @@ yVals = [10, 12, 15, 13, 21, 19]
 
 m = len(xVals) 
 
-n = len(yVals) 
-
-sumx = 0; sumy = 0; sumxy = 0; sumxx = 0 
-
-slope = 0; yInt = 0 
-
- 
+n = len(yVals)  
 
 # define a function to perform linear regression 
 
