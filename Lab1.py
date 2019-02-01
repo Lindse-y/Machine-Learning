@@ -5,6 +5,8 @@
 
 # define the data lists and their lengths 
 
+import math
+
 xVals = [1, 2, 3, 4, 5, 6] 
 
 yVals = [10, 12, 15, 13, 21, 19] 
@@ -12,6 +14,10 @@ yVals = [10, 12, 15, 13, 21, 19]
 m = len(xVals) 
 
 n = len(yVals) 
+
+sumx = 0; sumy = 0; sumxy = 0; sumxx = 0 
+
+slope = 0; yInt = 0 
 
  
 
@@ -23,11 +29,11 @@ def LinReg() :
 
     global m, n 
 
-    sumx = 0; sumy = 0; sumxy = 0; sumxx = 0 
+    sumx = 0; sumy = 0; sumxy = 0; sumxx = 0; sumyy =0;
 
     slope = 0; yInt = 0 
 
-     
+   
 
     for index in range(n) : 
 
@@ -39,9 +45,29 @@ def LinReg() :
 
         sumxx += xVals[index] * xVals[index] 
 
+        sumyy += yVals[index] * yVals[index]  # add this line
+
+
     slope = (n * sumxy - sumx * sumy) / (n * sumxx - sumx * sumx)  
 
     yInt = (sumy * sumxx - sumx * sumxy) / (n * sumxx - sumx * sumx) 
+
+
+    r = (n * sumxy - sumx * sumy) / (math.sqrt((n * sumxx - math.pow(sumx, 2)) * (n * sumyy - math.pow(sumy, 2)) ) )
+
+    
+
+    if ( r >= 0.80 and r <= 1.00) : 
+
+        print ("analysis: strong positive correlation") 
+
+    if ( r <= -0.80 and r >= -1.00) : 
+
+        print ("analysis: strong negative correlation") 
+
+    if ( r > -0.80 and r < 0.80) : 
+
+        print ("analysis: weak correlation")
 
       
 
@@ -78,21 +104,6 @@ def LinReg() :
     yExterp = slope * xExterp + yInt 
 
     print ("Extrapolation results: %0.2f" % yExterp)
-
-#Computing the Correlation Coefficient
-
-if ( r >= 0.80 and r <= 1.00) : 
-
-    print ("analysis: strong positive correlation") 
-
-if ( r <= -0.80 and r >= -1.00) : 
-
-    print ("analysis: strong negative correlation") 
-
-if ( r > -0.80 and r < 0.80) : 
-
-    print ("analysis: weak correlation")
- 
 
 # call the Linear Regression function 
 
