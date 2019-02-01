@@ -64,7 +64,7 @@ def LinReg() :
 
         print ("analysis: weak correlation")
 
-      
+    print (r2)    
 
     print ("the predicted slope is: %0.2f" % slope) 
 
