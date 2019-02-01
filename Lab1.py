@@ -49,6 +49,7 @@ def LinReg() :
 
     r = (n * sumxy - sumx * sumy) / (math.sqrt((n * sumxx - math.pow(sumx, 2)) * (n * sumyy - math.pow(sumy, 2)) ) )
 
+    r2= math.pow(r, 2)
     
 
     if ( r >= 0.80 and r <= 1.00) : 
