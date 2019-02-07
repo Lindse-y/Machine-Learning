@@ -9,11 +9,12 @@ import math
 
 xVals = [1, 2, 3, 4, 5, 6] 
 
-yVals = [10, 12, 15, 13, 21, 19] 
+yVals = [10, 12, 15, 13, 21, 100] 
 
 m = len(xVals) 
 
-n = len(yVals)  
+n = len(yVals) 
+ 
 
 # define a function to perform linear regression 
 
@@ -50,6 +51,7 @@ def LinReg() :
     r = (n * sumxy - sumx * sumy) / (math.sqrt((n * sumxx - math.pow(sumx, 2)) * (n * sumyy - math.pow(sumy, 2)) ) )
 
     r2= math.pow(r, 2)
+
     
 
     if ( r >= 0.80 and r <= 1.00) : 
@@ -60,11 +62,12 @@ def LinReg() :
 
         print ("analysis: strong negative correlation") 
 
-    if ( r > -0.80 and r < 0.80) : 
+    if ( r > -0.80 and r < 0.80) :   
 
         print ("analysis: weak correlation")
 
-    print (r2)    
+      
+    print (r2)
 
     print ("the predicted slope is: %0.2f" % slope) 
 
@@ -103,5 +106,6 @@ def LinReg() :
 # call the Linear Regression function 
 
 LinReg() 
+
 
  
