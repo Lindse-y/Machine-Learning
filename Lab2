@@ -1,4 +1,4 @@
- # creating the lists
+# creating the lists
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 months += ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 print ("the calendar year")
@@ -67,15 +67,47 @@ for index in range(n) :
 
 print ("first quarter sales: $%0.2f" % sumFirstA3 ,"\n")
 
-		# [ first quarter sales summary ]
-
-# first quarter sales for Region A, District 1
-# first quarter sales for Region A, District 2
-# first quarter sales for Region A, District 3
 
 # first quarter sales for Region B, District 1
+sumFirstB1 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[1] + " , " + districts[0] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstB1 += regB_dist1[index]
+
+print ("first quarter sales: $%0.2f" % sumFirstA2, "\n")
 # first quarter sales for Region B, District 2
+sumFirstB2 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[1] + " , " + districts[1] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstB2 += regB_dist2[index]
+
+print ("first quarter sales: $%0.2f" % sumFirstB2, "\n")
+
 # first quarter sales for Region B, District 3
+sumFirstB3 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[1] + " , " + districts[2] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstB3 += regB_dist3[index]
+
+print ("first quarter sales: $%0.2f" % sumFirstB3, "\n")
 
 # [ second quarter sales summary ]
 
