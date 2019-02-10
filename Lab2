@@ -1,0 +1,98 @@
+ # creating the lists
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+months += ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+print ("the calendar year")
+print (months)
+print ("")
+regions = ["Region A", "Region B"]
+print ("the designated regions")
+print (regions)
+print ("")
+districts = ["District 1", "District 2", "District 3"]
+print ("the defined districts")
+print (districts)
+print ("")
+qrts = ["first", "second", "third", "fourth"]
+
+# the semi - annual sales data by region and district
+# January - June
+regA_dist1 = [3.2, 4.3, 5.1, 4.7, 3.8, 6.9]
+regA_dist2 = [1.7, 2.4, 2.4, 6.1, 4.3, 5.7]
+regA_dist3 = [3.3, 5.0, 4.1, 3.4, 5.1, 4.1]
+
+regB_dist1 = [1.8, 5.8, 2.6, 1.8, 4.3, 2.6]
+regB_dist2 = [6.2, 6.0, 5.3, 6.2, 6.0, 5.3]
+regB_dist3 = [5.1, 3.9, 2.4, 5.1, 3.9, 4.4]
+
+
+# first quarter sales for Region A, District 1
+sumFirstA1 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[0] + " , " + districts[0] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstA1 += regA_dist1[index]
+print ("first quarter sales: $%0.2f" % sumFirstA1)
+print ("\n")
+
+# first quarter sales for Region A, District 2
+sumFirstA2 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[0] + " , " + districts[1] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstA2 += regA_dist2[index]
+
+print ("first quarter sales: $%0.2f" % sumFirstA2, "\n")
+
+# first quarter sales for Region A, District 3
+sumFirstA3 = 0
+n = len(months) - 9
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "quarter sales")
+msgPart = regions[0] + " , " + districts[2] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumFirstA3 += regA_dist3[index]
+
+print ("first quarter sales: $%0.2f" % sumFirstA3 ,"\n")
+
+		# [ first quarter sales summary ]
+
+# first quarter sales for Region A, District 1
+# first quarter sales for Region A, District 2
+# first quarter sales for Region A, District 3
+
+# first quarter sales for Region B, District 1
+# first quarter sales for Region B, District 2
+# first quarter sales for Region B, District 3
+
+# [ second quarter sales summary ]
+
+# second quarter sales for Region A, District 1
+# second quarter sales for Region A, District 2
+# second quarter sales for Region A, District 3
+
+# second quarter sales for Region B, District 1
+# second quarter sales for Region B, District 2
+# second quarter sales for Region B, District 3
+
+# [ semi - annual sales summary ]
+
+# semi - annual sales for Region A
+# semi - annual sales for Region B
+
+
+print ("")
+print ("first quarter sales: $%0.2f" % sumFirstA1)
+print ("\n")
