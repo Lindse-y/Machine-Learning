@@ -80,7 +80,8 @@ print ("(", msgPart, ")")
 for index in range(n) :
     sumFirstB1 += regB_dist1[index]
 
-print ("first quarter sales: $%0.2f" % sumFirstA2, "\n")
+print ("first quarter sales: $%0.2f" % sumFirstB1, "\n")
+
 # first quarter sales for Region B, District 2
 sumFirstB2 = 0
 n = len(months) - 9
@@ -127,4 +128,5 @@ print ("first quarter sales: $%0.2f" % sumFirstB3, "\n")
 
 print ("")
 print ("first quarter sales: $%0.2f" % sumFirstA1)
+print ("second quarter sales: $%0.2f" % sumFirstB1)
 print ("\n")
