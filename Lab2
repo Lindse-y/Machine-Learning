@@ -113,6 +113,18 @@ print ("first quarter sales: $%0.2f" % sumFirstB3, "\n")
 # [ second quarter sales summary ]
 
 # second quarter sales for Region A, District 1
+sumSecondA1 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[0] + " , " + districts[0] + " "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumSecondA1 += regA_dist1[index]
+print ("second quarter sales: $%0.2f" % sumSecondA1)
+print ("\n")
 # second quarter sales for Region A, District 2
 # second quarter sales for Region A, District 3
 
