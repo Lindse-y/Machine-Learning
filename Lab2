@@ -1,3 +1,4 @@
+
 # creating the lists
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 months += ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -121,20 +122,95 @@ print ("computing ...", qrts[1], "quarter sales")
 msgPart = regions[0] + " , " + districts[0] + " "
 print ("(", msgPart, ")")
 
-for index in range(n) :
+for index in range(3,n) :
     sumSecondA1 += regA_dist1[index]
-print ("second quarter sales: $%0.2f" % sumSecondA1)
-print ("\n")
+print ("second quarter sales: $%0.2f" % sumSecondA1, "\n")
+
 # second quarter sales for Region A, District 2
+sumSecondA2 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[0] + " , " + districts[1] + " "
+print ("(", msgPart, ")")
+
+for index in range(3,n) :
+    sumSecondA2 += regA_dist2[index]
+print ("second quarter sales: $%0.2f" % sumSecondA2, "\n")
+
 # second quarter sales for Region A, District 3
 
+sumSecondA3 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[0] + " , " + districts[2] + " "
+print ("(", msgPart, ")")
+
+for index in range(3,n) :
+    sumSecondA3 += regA_dist3[index]
+print ("second quarter sales: $%0.2f" % sumSecondA3, "\n")
+
 # second quarter sales for Region B, District 1
+
+sumSecondB1 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[1] + " , " + districts[0] + " "
+print ("(", msgPart, ")")
+
+for index in range(3,n) :
+    sumSecondB1 += regB_dist1[index]
+print ("second quarter sales: $%0.2f" % sumSecondB1, "\n")
+
 # second quarter sales for Region B, District 2
+
+sumSecondB2 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[1] + " , " + districts[1] + " "
+print ("(", msgPart, ")")
+
+for index in range(3,n) :
+    sumSecondB2 += regB_dist2[index]
+print ("second quarter sales: $%0.2f" % sumSecondB2, "\n")
+
 # second quarter sales for Region B, District 3
+
+sumSecondB3 = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[1], "quarter sales")
+msgPart = regions[1] + " , " + districts[2] + " "
+print ("(", msgPart, ")")
+
+for index in range(3,n) :
+    sumSecondB3 += regB_dist3[index]
+print ("second quarter sales: $%0.2f" % sumSecondB3, "\n")
 
 # [ semi - annual sales summary ]
 
 # semi - annual sales for Region A
+
+sumSemiAnnualA = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "semi annual sales")
+msgPart = regions[0] + " , " + districts[0] + "semi annual sales "
+print ("(", msgPart, ")")
+
+for index in range(n) :
+    sumSemiAnnualA += regA_dist1[index], regA_dist2[index], regA_dist3[index]
+print ("Semi Annual Sales Region A: $%0.2f" % sumSemiAnnualA, "\n")
+
 # semi - annual sales for Region B
 
 
