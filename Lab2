@@ -230,3 +230,10 @@ print ("first quarter sales: $%0.2f" % sumFirstA1)
 print ("second quarter sales: $%0.2f" % sumFirstB1)
 print ("\n")
 
+array = np.array([regA_dist1, regA_dist2])
+c= array/array.sum(1, keepdims=True)
+print(c)
+
+array = np.array([regB_dist1, regB_dist2])
+c= array/array.sum(1, keepdims=True)
+print(c)
