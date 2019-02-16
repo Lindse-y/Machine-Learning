@@ -1,4 +1,5 @@
 
+
 # creating the lists
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 months += ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -203,18 +204,29 @@ sumSemiAnnualA = 0
 n = len(months) - 6
 msg = ""
 print ("")
-print ("computing ...", qrts[0], "semi annual sales")
-msgPart = regions[0] + " , " + districts[0] + "semi annual sales "
+print ("computing ...", qrts[0], "&", qrts[1], " quarter semi annual sales")
+msgPart = regions[0] + " , " +  " Total Semi Annual Sales "
 print ("(", msgPart, ")")
 
 for index in range(n) :
-    sumSemiAnnualA += regA_dist1[index], regA_dist2[index], regA_dist3[index]
+    sumSemiAnnualA += regA_dist1[index] + regA_dist2[index] + regA_dist3[index]
 print ("Semi Annual Sales Region A: $%0.2f" % sumSemiAnnualA, "\n")
 
 # semi - annual sales for Region B
 
+sumSemiAnnualB = 0
+n = len(months) - 6
+msg = ""
+print ("")
+print ("computing ...", qrts[0], "&", qrts[1], " quarter semi annual sales")
+msgPart = regions[1] + " , " + " Total Semi Annual Sales "
+print ("(", msgPart, ")")
 
+for index in range(n) :
+    sumSemiAnnualB += regB_dist1[index] + regB_dist2[index] + regB_dist3[index]
+print ("Semi Annual Sales Region B: $%0.2f" % sumSemiAnnualB, "\n")
 print ("")
 print ("first quarter sales: $%0.2f" % sumFirstA1)
 print ("second quarter sales: $%0.2f" % sumFirstB1)
 print ("\n")
+
