@@ -57,3 +57,36 @@ Randolph's
 Clancy's Clothiers
 
 [No more stores to allocate]
+
+# import some packaged libraries
+import numpy as np
+import random as rn
+
+# declare a list of 10 elements (initialized to zeros)
+list1 = [0 for x in range(10)]
+print (list1)
+print ("")
+
+# declare a random list of 10 unique elements
+list2 = rn.sample(range(1, 11), 10)
+print (list2)
+print ("")
+
+# populate the list of zeros with 1's and 0's
+for i in range(0, 10) :
+    list1[i] = rn.randint(0, 1)
+
+# a list in numpy form
+c = np.asarray(list1)
+print ("numps", c)
+print ("")
+# print (list2)
+
+# multi – dimensional analysis
+
+# empty regular list
+array1 = []
+for i in range(3):
+    arr = i * np.ones((3,3))
+    array1.append(arr)
+np_array1 = np.array(array1)
