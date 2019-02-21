@@ -1,155 +1,59 @@
-stores = ["Avenue Jewelers", "Avenue Restaurant", "Barney's Castle"]
-stores += ["City Appliances", "Clancy's Clothiers","Friendly Fast Food"]
-stores += ["Hardware Corner", "Musical Planet", "Randolph's","Sports and More"]
-categories = ["Jewelry Store", "Family Restaurant", "Arcade Games"]
-categories += ["Home Appliances", "Clothing", "Fast Food Restaurant"]
-categories += ["Hardware and Tools", "Music and Movies", "Books, Games and Gifts", "Sports Equipment"]
-traffic = [101, 273, 108, 97, 76, 203, 306, 121, 83, 192]
-sales = [60.2, 73.4, 12.7, 98.1, 18.7, 16.1, 30.9, 17.3, 19.4, 22.0]
-proximity = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-chain = ["Yes", "No"]
-anchor = ["Yes", "No"]
-print ("[store listings]")
+[store listings]
+Avenue Jewelers          Avenue Restaurant
+Barney's Castle          City Appliances
+Clancy's Clothiers       Friendly Fast Food
+Hardware Corner          Musical Planet
+Randolph's               Sports and More
 
-for index in range(0, len(stores), 2) :
-    print (stores[index].ljust(20), "\t",
-           stores[index + 1].ljust(20))
-print ("\n[store categories]")
+[store categories]
+Jewelry Store            Family Restaurant
+Arcade Games             Home Appliances
+Clothing                 Fast Food Restaurant
+Hardware and Tools       Music and Movies
+Books, Games and Gifts   Sports Equipment
 
-for index in range(0, len(categories), 2) :
-    print (categories[index].ljust(20), "\t",
-           categories[index + 1].ljust(20))
+[Maximized store placement by zone and traffic foot print data]
+Hardware Corner
+Avenue Restaurant
 
-#figure 4-allocate mall stores into their respective mall zones optimally according to their projected daily shoppers traffic.
+[after 2nd store added - Current remaining stores to be allocated]
+['Avenue Jewelers', "Barney's Castle", 'City Appliances', "Clancy's Clothiers", 'Friendly Fast Food', 'Musical Planet', "Randolph's", 'Sports and More']
 
-print("\n[Maximized store placement by zone and traffic foot print data]")
+Friendly Fast Food
 
-# allocate or map the stores according to traffic foot print data
-# first store is placed
-traffic = [101, 273, 108, 97, 76, 203, 306, 121, 83, 192]
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+[after 3rd store added - Current remaining stores to be allocated]
+['Avenue Jewelers', "Barney's Castle", 'City Appliances', "Clancy's Clothiers", 'Musical Planet', "Randolph's", 'Sports and More']
 
-zones = [7, 6, 8, 4, 5, 9, 3, 10, 2, 1]
-places = []
-places += [stores[maxi], zones[0]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
- 
-# second store is allocated
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Sports and More
 
-places += [stores[maxi], zones[1]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 4th store added - Current remaining stores to be allocated]
+['Avenue Jewelers', "Barney's Castle", 'City Appliances', "Clancy's Clothiers", 'Musical Planet', "Randolph's"]
 
-#third store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Musical Planet
 
-places += [stores[maxi], zones[2]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 5th store added - Current remaining stores to be allocated]
+['Avenue Jewelers', "Barney's Castle", 'City Appliances', "Clancy's Clothiers", "Randolph's"]
 
-#fourth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Barney's Castle
 
-places += [stores[maxi], zones[3]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 6th store added - Current remaining stores to be allocated]
+['Avenue Jewelers', 'City Appliances', "Clancy's Clothiers", "Randolph's"]
 
-#fifth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Avenue Jewelers
 
-places += [stores[maxi], zones[4]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 7th store added - Current remaining stores to be allocated]
+['City Appliances', "Clancy's Clothiers", "Randolph's"]
 
-#sixth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+City Appliances
 
-places += [stores[maxi], zones[5]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 8th store added - Current remaining stores to be allocated]
+["Clancy's Clothiers", "Randolph's"]
 
-#seventh store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Randolph's
 
-places += [stores[maxi], zones[6]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
+[after 9th store added - Current remaining stores to be allocated]
+["Clancy's Clothiers"]
 
-#eighth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
+Clancy's Clothiers
 
-places += [stores[maxi], zones[7]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
-
-#ninth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
-
-places += [stores[maxi], zones[8]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
-
-#tenth store
-maxi = traffic.index(max(traffic))
-print (stores[maxi])
-
-places += [stores[maxi], zones[9]]
-stores.remove(stores[maxi])
-traffic.remove(traffic[maxi])
-
-# current leftover placements that need to be maximized
-print("\n[Current remaining stores to be allocated]")
-print (stores)
-print (places)
-print (traffic,"\n")
-
-#declare and initialize a single dimensional list
-n=5
-L1=[0 for index in range(n)]
-
-print("list elements:",L1)
-print("the first element in the list", L1[0])
-print("")
-
-#declare and initialize a columnar list
-
-x, y, values = 1, 2, 3
-L1 = [[values] * x for iindex in range(y)]
-print("list elements:", L1)
-print("the second row element in the list", L1[1][0])
-
-L2 = []
-letter = "a"
-for index in range(5) :
-    # append some list elements
-    L2.append(letter)
-    letter += "b"
-print ("list elements:", L2)
-# remove a list element
-L2.remove("abb")
-print ("list elements:", L2)
-# determine the count of a particular list element
-print (L2.count("abbb"))
-
-# clear the list
-L2.clear()
-print ("list elements:", L2)
-
-# find the sum of each row in a two - dimensional list
-my_List = [[2, 8, 12], [5, 7, 19], [50, 0, 0]]
-print (my_List)
-sum_List = []
-for row in my_List :
-    sum_List.append(sum(row))
-print(sum_List)
+[No more stores to allocate]
